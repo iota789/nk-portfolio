@@ -12,6 +12,10 @@ export const profile = {
   linkedinHandle: 'in/narayan-kartikeyan-c-668343221',
   // Photo lives at /public/profile.jpg — the initials show if it's missing.
   photo: `${import.meta.env.BASE_URL}profile.jpg`,
+  // Resume PDF lives at /public — replace that file to update it.
+  resume: {
+    href: `${import.meta.env.BASE_URL}Narayan_Kartikeyan_C_Resume.pdf`,
+  },
   // How the photo is framed in the hero circle: zoom level + focal point (0–1).
   photoFrame: { zoom: 1.7, focusX: 0.6, focusY: 0.36 },
   tagline:
