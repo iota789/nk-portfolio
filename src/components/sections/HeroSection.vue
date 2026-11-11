@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ArrowDownRight, MapPin, Mail } from 'lucide-vue-next'
+import { ArrowUpRight, MapPin, Mail } from 'lucide-vue-next'
 import Aurora from '@/components/vue-bits/Aurora.vue'
 import SplitText from '@/components/vue-bits/SplitText.vue'
 import BlurText from '@/components/vue-bits/BlurText.vue'
@@ -55,10 +55,20 @@ import { profile, stats } from '@/data/resume'
             />
 
             <div class="mt-10 flex flex-wrap items-center gap-4">
-              <StarBorder as="a" href="#projects" color="#42b883" speed="5s" custom-class="group">
+              <StarBorder
+                as="a"
+                :href="profile.resume.href"
+                target="_blank"
+                rel="noopener"
+                color="#42b883"
+                speed="5s"
+                custom-class="group"
+              >
                 <span class="inline-flex items-center gap-2 font-medium">
-                  View my work
-                  <ArrowDownRight class="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:translate-y-0.5" />
+                  View resume
+                  <ArrowUpRight
+                    class="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+                  />
                 </span>
               </StarBorder>
               <Magnet :padding="60" :magnet-strength="3">
